@@ -16,9 +16,13 @@ export default function RootLayout({
     </div>
     <div className="col-8 text-end">
       <nav>
+        {/* always start from /xyz/abc so the problem of one page to other of 404 not found dont happen */}
         <Link href="/" className="me-3 text-decoration-none">Main Page</Link>
         <Link href="/home" className="me-3 text-decoration-none">Home</Link>
         <Link href="/home/inner_home" className="me-3 text-decoration-none">inner home</Link>
+        <Link href="/about" className="me-3 text-decoration-none">main about</Link>
+        <Link href="/about/about_one" className="me-3 text-decoration-none">about one</Link>
+        <Link href="/about/about_two" className="me-3 text-decoration-none">about two</Link>
       </nav>
     </div>
   </div>
