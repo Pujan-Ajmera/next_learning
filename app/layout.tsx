@@ -1,4 +1,5 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import Link from "next/link";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,9 +16,9 @@ export default function RootLayout({
     </div>
     <div className="col-8 text-end">
       <nav>
-        <a href="#" className="me-3 text-decoration-none">Home</a>
-        <a href="#" className="me-3 text-decoration-none">About</a>
-        <a href="#" className="text-decoration-none">Contact</a>
+        <Link href="/" className="me-3 text-decoration-none">Main Page</Link>
+        <Link href="/home" className="me-3 text-decoration-none">Home</Link>
+        <Link href="/home/inner_home" className="me-3 text-decoration-none">inner home</Link>
       </nav>
     </div>
   </div>
@@ -32,10 +33,7 @@ export default function RootLayout({
       </div>
     </div>
   </div>
-
 </div>
-
-
       </body>
     </html>
   );
